@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import TasksPage from './components/TaskPage';
-import db from './db';
 
-const App = () => (
+const App = props => (
   <div className="main-content">
-    <TasksPage tasks={db} />
+    <TasksPage tasks={props.tasks} />
   </div>
 )
 
-export default App;
+const mapStateToProps = state => ({
+  tasks: state.tasks,
+});
+
+export default connect(mapStateToProps)(App);
