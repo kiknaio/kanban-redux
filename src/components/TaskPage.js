@@ -52,17 +52,17 @@ class TasksPage extends Component {
 
   render() {
     return (
-      <div className="task-lists">
-        <div className="task-list-header">
-          <button 
-            className="button button-default"
-            onClick={this.toggleForm}
-          >
-            + New Task
-          </button>
+      <React.Fragment>
+        <button 
+          className="button button-default add-task-button"
+          onClick={this.toggleForm}
+        >
+          + New Task
+        </button>
+        <div className="tasks">
+          {this.renderTaskList()}
         </div>
-        {this.renderTaskList()}
-      </div>
+      </React.Fragment>
     )
   }
 }
