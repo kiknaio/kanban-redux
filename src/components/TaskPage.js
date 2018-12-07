@@ -53,11 +53,11 @@ class TasksPage extends Component {
   render() {
     return (
       <React.Fragment>
-        <button 
+        <button
           className="button button-default add-task-button"
           onClick={this.toggleForm}
         >
-          + New Task
+          Add Task
         </button>
         <div className="tasks">
           {this.renderTaskList()}

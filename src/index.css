@@ -51,7 +51,6 @@ hr {
   background-color: #f2f2f2;
   width: 100%;
   height: 100%;
-  padding-top: 50px;
 }
 
 /* TaskList */
@@ -61,6 +60,7 @@ hr {
 
 .tasks {
   margin: 0 auto;
+  padding-top: 50px;
   max-width: 980px;
   display: flex;
 }
@@ -111,4 +111,18 @@ hr {
 .task-list-title:hover {
   color: #f1c40f;
   cursor: pointer;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 750px)  {
+  .tasks {
+    padding-top: 10px;
+    flex-direction: column;
+  }
+  .task-list {
+    width: 100%;
+  }
+  .add-task-button {
+    height: 70px;
+  }
 }
