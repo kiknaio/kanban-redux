@@ -53,12 +53,31 @@ class TasksPage extends Component {
   render() {
     return (
       <React.Fragment>
-        <button
-          className="button button-default add-task-button"
-          onClick={this.toggleForm}
-        >
-          Add Task
-        </button>
+        <div className="add-task-wrapper">
+          {this.state.showNewCardForm && (
+            <form className="task-list-form" onSubmit={this.onCreateTask}>
+              <input
+                className="full-width-input"
+                onChange={this.onDescriptionChange}
+                value={this.state.desciption}
+                type="text"
+                placeholder="description"
+              />
+              <button
+                className="button"
+                type="button">
+                Save
+              </button>
+            </form>
+          )}
+          <button
+            className="button button-default add-task-button"
+            onClick={this.toggleForm}
+          >
+            Add Task
+          </button>
+        </div>
+
         <div className="tasks">
           {this.renderTaskList()}
         </div>

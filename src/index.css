@@ -89,10 +89,14 @@ hr {
   min-height: 60px;
 }
 
-.add-task-button {
-  background: #f1c40f;
+.add-task-wrapper {
   position: absolute;
   bottom: 0;
+  width: 100%;
+}
+
+.add-task-button {
+  background: #f1c40f;
   width: 100%;
 }
 
